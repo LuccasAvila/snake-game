@@ -25,6 +25,10 @@ window.onload = function() {
         if(event.keyCode == 38 && direction != 'down' && ableMove) direction = 'up'
         if(event.keyCode == 39 && direction != 'left' && ableMove) direction = 'right'
         if(event.keyCode == 40 && direction != 'up' && ableMove) direction = 'down'
+        if(event.keyCode == 72 && direction != 'right' && ableMove) direction = 'left'
+        if(event.keyCode == 75 && direction != 'down' && ableMove) direction = 'up'
+        if(event.keyCode == 76 && direction != 'left' && ableMove) direction = 'right'
+        if(event.keyCode == 74 && direction != 'up' && ableMove) direction = 'down'
         ableMove = 0
     })
     
@@ -111,7 +115,7 @@ window.onload = function() {
     function gameOver(game) {
         clearInterval(game)
         ctx.font = "72px VT323"
-        let message = "Gamer Over"
+        let message = "Game Over"
         let textWidth = ctx.measureText(message ).width
         ctx.fillText(message, (canvas.width/2) - (textWidth / 2), 100)
     }
