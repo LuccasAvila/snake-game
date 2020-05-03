@@ -11,7 +11,7 @@
   <h3 align="center">Snake Game</h3>
 
   <p align="center">
-    A multiplayer snake game using Html Canvas, Javascript, Express and Socket.io
+    A single and multiplayer snake game using Html Canvas, Javascript, Express and Socket.io
     <br />
     <br />
     <a href="#">View Demo (Coming soon)</a>
@@ -45,7 +45,7 @@
 
 ## Getting Started
 
-You can view a live demo over at [here](https://luccasavila.github.io/snake-game/) (coming soon)
+You can view a live demo over at [here](#) (coming soon)
 
 Clone down this repository. You will need `node` and `npm` or `yarn` installed globally on your machine.
 
