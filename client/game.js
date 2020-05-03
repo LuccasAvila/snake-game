@@ -16,14 +16,16 @@ window.onload = function() {
     let food = randomCoords()
     let direction = 'right'
     let score = 0
+    let ableMove = 1
 
     const game = setInterval(update, 100)
 
     document.addEventListener('keydown', (event) => {
-        if(event.keyCode == 37 && direction != 'right') direction = 'left'
-        if(event.keyCode == 38 && direction != 'down') direction = 'up'
-        if(event.keyCode == 39 && direction != 'left') direction = 'right'
-        if(event.keyCode == 40 && direction != 'up') direction = 'down'
+        if(event.keyCode == 37 && direction != 'right' && ableMove) direction = 'left'
+        if(event.keyCode == 38 && direction != 'down' && ableMove) direction = 'up'
+        if(event.keyCode == 39 && direction != 'left' && ableMove) direction = 'right'
+        if(event.keyCode == 40 && direction != 'up' && ableMove) direction = 'down'
+        ableMove = 0
     })
     
     function update() {
@@ -42,6 +44,7 @@ window.onload = function() {
                 snake[0].y += boxSize
                 break
         }
+        ableMove = 1
 
         // Prevents the snake from leaving the screen
         if(snake[0].x > canvas.width - boxSize) {
