@@ -38,6 +38,17 @@ h1 {
 
 /* Game */
 
+.game {
+    display: flex;
+}
+
+.hud {
+    width: 240px;
+    border: 1px solid #fff;
+    margin-right: 16px;
+    padding: 16px;
+}
+
 canvas {
     border: 1px solid #fff;
 }
