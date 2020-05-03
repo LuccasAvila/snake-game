@@ -8,6 +8,11 @@ server.listen(3000, () => {
 })
 
 app.use(express.static('client'));
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/client/index.html');
+});
+
+app.get('/game', (req, res) => {
+  res.sendFile(__dirname + '/client/game.html');
 });

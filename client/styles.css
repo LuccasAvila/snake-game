@@ -19,6 +19,8 @@ h1 {
     text-shadow: 0 0px 12px #aaa;
 }
 
+/* Room */
+
 .room__table {
     text-align: left;
     width: 320px;
@@ -32,4 +34,10 @@ h1 {
 .room__create {
     margin-top: 32px;
     font-size: 1.125em;
+}
+
+/* Game */
+
+canvas {
+    border: 1px solid #fff;
 }
