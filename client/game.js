@@ -115,7 +115,7 @@ window.onload = function() {
     function gameOver(game) {
         clearInterval(game)
         ctx.font = "72px VT323"
-        let message = "Gamer Over"
+        let message = "Game Over"
         let textWidth = ctx.measureText(message ).width
         ctx.fillText(message, (canvas.width/2) - (textWidth / 2), 100)
     }
