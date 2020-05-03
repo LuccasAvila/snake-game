@@ -13,6 +13,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/client/index.html');
 });
 
-app.get('/game', (req, res) => {
+app.get('/single', (req, res) => {
   res.sendFile(__dirname + '/client/game.html');
 });

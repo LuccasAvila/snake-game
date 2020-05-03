@@ -8,27 +8,33 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <main class="rooms">
-        <h1>Rooms</h1>
-        <table class="room__table">
-            <thead>
-                <tr>
-                    <th>Owner</th>
-                    <th>Players</th>
-                    <th>Status</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John Doe</td>
-                    <td>1/4</td>
-                    <td>Waiting</td>
-                    <td class="room__join">Join</td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="room__create">+ Create Room</p>
+    <main>
+        <section class="single">
+            <h1 class="title">Snake Game</h1>
+            <a class="join" href="/single">Singleplayer</a>
+        </section>
+        <section class="rooms">
+            <h1>Rooms</h1>
+            <table class="rooms__table">
+                <thead>
+                    <tr>
+                        <th>Owner</th>
+                        <th>Players</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>1/4</td>
+                        <td>Waiting</td>
+                        <td class="join">Join</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="rooms__create">+ Create Room</p>
+        </section>
     </main>
 </body>
 </html>

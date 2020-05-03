@@ -21,17 +21,22 @@ h1 {
 
 /* Room */
 
-.room__table {
+.rooms {
+    margin-top: 64px;
+}
+
+.rooms__table {
     text-align: left;
     width: 320px;
 }
 
-.room__join {
+.join {
     color: greenyellow;
     text-shadow: 0 0px 8px greenyellow;
+    text-decoration: none;
 }
 
-.room__create {
+.rooms__create {
     margin-top: 32px;
     font-size: 1.125em;
 }
