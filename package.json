@@ -1,0 +1,26 @@
+{
+  "name": "snake-game",
+  "version": "1.0.0",
+  "description": "A multiplayer snake game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuccasAvila/snake-game.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Luccas Avila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LuccasAvila/snake-game/issues"
+  },
+  "homepage": "https://github.com/LuccasAvila/snake-game#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
