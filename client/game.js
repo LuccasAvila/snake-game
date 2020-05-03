@@ -15,6 +15,7 @@ window.onload = function() {
     // Create the food
     let food = randomCoords()
     let direction = 'right'
+    let score = 0
 
     const game = setInterval(update, 100)
 
@@ -86,12 +87,13 @@ window.onload = function() {
         // If the snake gets the food
         if(snake[0].x == food.x && snake[0].y == food.y) {
             // Generate new food
+            score++
+            renderHud(score)
             food = randomCoords()
         } else {
             // Remove the old snake head position
             snake.pop()
         }
-        
 
         snake.unshift(newPosition)
     }
@@ -101,5 +103,10 @@ window.onload = function() {
             x: Math.floor(Math.random() * boxAmount) * boxSize,
             y: Math.floor(Math.random() * boxAmount) * boxSize
         }
+    }
+
+    function renderHud(score) {
+        let selfScore = document.querySelector('#selfScore')
+        selfScore.innerHTML = score
     }
 }
