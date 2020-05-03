@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    
+    <main class="rooms">
+        <h1>Rooms</h1>
+        <table class="room__table">
+            <thead>
+                <tr>
+                    <th>Owner</th>
+                    <th>Players</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>1/4</td>
+                    <td>Waiting</td>
+                    <td class="room__join">Join</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="room__create">+ Create Room</p>
+    </main>
 </body>
 </html>

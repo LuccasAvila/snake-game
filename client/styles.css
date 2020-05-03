@@ -1,0 +1,35 @@
+* {
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    justify-content: center;
+}
+
+h1 {
+    text-shadow: 0 0px 12px #aaa;
+}
+
+.room__table {
+    text-align: left;
+    width: 320px;
+}
+
+.room__join {
+    color: greenyellow;
+    text-shadow: 0 0px 8px greenyellow;
+}
+
+.room__create {
+    margin-top: 32px;
+    font-size: 1.125em;
+}
