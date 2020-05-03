@@ -15,6 +15,14 @@ body {
     justify-content: center;
 }
 
+button {
+    border: 0;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+    outline: 0;
+}
+
 h1 {
     text-shadow: 0 0px 12px #aaa;
 }
@@ -52,8 +60,25 @@ h1 {
     border: 1px solid #fff;
     margin-right: 16px;
     padding: 16px;
+    position: relative;
 }
 
 canvas {
     border: 1px solid #fff;
+}
+
+.restart {
+    color: indianred;
+    text-shadow: 0 0 8px indianred;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    transition: .4s ease-in-out;
+}
+
+.restart:hover {
+    color: red;
+    text-shadow: 0 0 8px red;
 }

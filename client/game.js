@@ -5,20 +5,12 @@ window.onload = function() {
     // Set game variables
     const boxSize = 16
     const boxAmount = canvas.width / boxSize
-    // Create the snake
-    const snake = []
-    // Set snake head position
-    snake[0] = {
-        x: 32,
-        y: 32
-    }
-    // Create the food
-    let food = randomCoords()
-    let direction = 'right'
-    let score = 0
-    let ableMove = 1
-
-    const game = setInterval(update, 100)
+    let snake
+    let food
+    let direction
+    let score
+    let ableMove
+    let game
 
     document.addEventListener('keydown', (event) => {
         if(event.keyCode == 37 && direction != 'right' && ableMove) direction = 'left'
@@ -31,6 +23,11 @@ window.onload = function() {
         if(event.keyCode == 74 && direction != 'up' && ableMove) direction = 'down'
         ableMove = 0
     })
+
+    start()
+
+    const restartButton = document.querySelector('#restart')
+    restartButton.addEventListener('click', start)
     
     function update() {
         // Move the snake according to the direction
@@ -123,5 +120,22 @@ window.onload = function() {
     function renderHud(score) {
         let selfScore = document.querySelector('#selfScore')
         selfScore.innerHTML = score
+    }
+
+    function start() {
+        // Set snake head position
+        snake = [
+            {
+                x: 32,
+                y: 32
+            }
+        ]
+        // Create the food
+        food = randomCoords()
+        direction = 'right'
+        score = 0
+        ableMove = 1
+        renderHud(score)
+        game = setInterval(update, 100)
     }
 }
