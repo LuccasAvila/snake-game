@@ -81,7 +81,7 @@ window.onload = function() {
         // Game over when snake collider her head with her tail
         for(let i = 1; i < snake.length; i++) {
             if(snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-                clearTimeout(game)
+                gameOver(game)
             }
         }
 
@@ -110,6 +110,14 @@ window.onload = function() {
             x: Math.floor(Math.random() * boxAmount) * boxSize,
             y: Math.floor(Math.random() * boxAmount) * boxSize
         }
+    }
+
+    function gameOver(game) {
+        clearInterval(game)
+        ctx.font = "72px VT323"
+        let message = "Gamer Over"
+        let textWidth = ctx.measureText(message ).width
+        ctx.fillText(message, (canvas.width/2) - (textWidth / 2), 100)
     }
 
     function renderHud(score) {
