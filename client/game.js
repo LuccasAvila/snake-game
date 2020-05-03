@@ -16,7 +16,7 @@ window.onload = function() {
     let food = randomCoords()
     let direction = 'right'
 
-    const game = setInterval(update, 200)
+    const game = setInterval(update, 100)
 
     document.addEventListener('keydown', (event) => {
         if(event.keyCode == 37 && direction != 'right') direction = 'left'
@@ -68,6 +68,13 @@ window.onload = function() {
         ctx.fillStyle = 'white'
         for(let i = 0; i < snake.length; i++) {
             ctx.fillRect(snake[i].x, snake[i].y, boxSize - 1, boxSize - 1)
+        }
+
+        // Game over when snake collider her head with her tail
+        for(let i = 1; i < snake.length; i++) {
+            if(snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+                clearTimeout(game)
+            }
         }
 
         // Create the new position of snake head
